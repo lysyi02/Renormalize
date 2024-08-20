@@ -8,7 +8,6 @@ import { writeJsonToFile } from "./fileUtils";
 /**
  * Sorts dataset by similarity to the most similar known email. Writes output into json file.
  *
- *
  * @example Example output in the result file (`outputPath`):
  * [
  *   {
@@ -46,7 +45,7 @@ export function classifyDataset(): void {
   console.log(
     `------------------------------------------------IMPORTANT------------------------------------------------------------
 The algorithm may identify weak similarities (typically with a similarity rate of 0 to 0.3) between unrelated emails. 
-Related emails generally have a higher similarity rate (0.5+).
+Related emails generally have a higher similarity rate (0.7+).
 Inspect '${config.classifiedOutputPath}' to determine the appropriate similarity threshold and adjust it in .env.
 Results with a similarity below the threshold will be classified as 'not_recognized'. (Default threshold = 0.5)
 ---------------------------------------------------------------------------------------------------------------------\n`,

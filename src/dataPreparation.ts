@@ -10,6 +10,7 @@ import { readJsonFromFile } from "./fileUtils";
 export function prepareUncategorizedEmails(
   sampleDataPath: PathOrFileDescriptor,
 ): Set<string> {
+  // We use Set to avoid email duplications
   const uncategorizedEmails = new Set<string>();
   const data = readJsonFromFile(sampleDataPath);
   for (const record of data) {
@@ -28,6 +29,7 @@ export function prepareUncategorizedEmails(
 export function prepareKnownEmails(
   usersDataPath: PathOrFileDescriptor,
 ): Set<string> {
+  // We use Set to avoid email duplications
   const knownEmails = new Set<string>();
   const users = readJsonFromFile(usersDataPath);
   for (const user of users) {

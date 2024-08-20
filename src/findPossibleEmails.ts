@@ -6,6 +6,30 @@ import {
 import { findMostSimilarKnownEmail } from "./emailSimilarity";
 import { writeJsonToFile } from "./fileUtils";
 
+/**
+ * Finds and classifies emails based on their similarity to known emails.
+ *
+ * This function compares uncategorized emails to a list of known emails using a specified similarity threshold.
+ * It categorizes the emails into recognized and not recognized groups and writes the results to a JSON file.
+ *
+ * @param {number} threshold - The similarity threshold used to determine if an email is recognized.
+ *
+ * The output is saved to a JSON file specified by `config.finalOutputPath`. The result includes:
+ * - `recognized`: An array of objects where each object contains a user email and an array of related emails.
+ * - `not_recognized`: An array of emails that did not match any known emails above the threshold.
+ *
+ * @example Output:
+ * {
+ *   "recognized": [
+ *     {
+ *       "user_email": "user@example.com",
+ *       "related_emails": ["u2ser2@example.com", "user.3@example.com"]
+ *     }
+ *   ],
+ *   "not_recognized": ["unknown@example.com", "another_unknown@example.com"]
+ * }
+ *
+ */
 export function findPossibleEmails(threshold: number) {
   const knownEmails = prepareKnownEmails(config.usersDataPath);
   const uncategorizedEmails = prepareUncategorizedEmails(config.sampleDataPath);
