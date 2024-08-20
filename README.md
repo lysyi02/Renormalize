@@ -14,21 +14,21 @@ Given a user with the email `michael.scott@renormale.com`, possible related emai
 The results are saved in a JSON file with the following structure:
 
 ```
-	{
-      "recognized": [
-        {
-          "user_email": "michael.scott@renormale.com",
-          "related_emails": [
-            "michael.scott@gmail.com",
-            "mich34dwe46ael.scott@outlook.com"
-          ]
-        }
-      ],
-      "not_recognized": [
-        "unknown@example.com",
-        "another_unknown@example.com"
+{
+  "recognized": [
+    {
+      "user_email": "michael.scott@renormale.com",
+      "related_emails": [
+        "michael.scott@gmail.com",
+        "mich34dwe46ael.scott@outlook.com"
       ]
     }
+  ],
+  "not_recognized": [
+    "unknown@example.com",
+    "another_unknown@example.com"
+  ]
+}
 ```
 
 ## Table of Contents
