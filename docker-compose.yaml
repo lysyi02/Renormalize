@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./results:/app/results
+    env_file:
+      - .env
+    command: ["node", "./build/index.js"]
