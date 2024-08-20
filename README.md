@@ -35,7 +35,6 @@ The results are saved in a JSON file with the following structure:
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
