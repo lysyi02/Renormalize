@@ -1,4 +1,4 @@
-# Renormalized - Email classifier
+# Renormalize - Email classifier
 
 **Overview:**  
 Script reads users from `users.json` and identifies related emails from `sample_data.json` based on similarity to known user emails. The results are saved as "recognized" (similar emails) and "not_recognized" (unmatched emails) in a JSON file.
