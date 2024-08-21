@@ -107,7 +107,7 @@ node ./build/index.js
 
 The script classifies emails using the [Dice-Sørensen coefficient](https://www.npmjs.com/package/string-similarity-js) algorithm. This algorithm may detect weak similarities (typically with a similarity rate between 0 and 0.3) between unrelated emails. Related emails generally have a higher similarity rate (0.7+).
 
-The script uses a threshold value for classification. Emails with a similarity rate below the threshold will be classified as 'not*recognized' (\_Default threshold = 0.5*).
+The script uses a threshold value for classification. Emails with a similarity rate below the threshold will be classified as 'not\_recognized' (*Default threshold = 0.5*).
 
 You can inspect the `classified-dataset.json` output file to determine the appropriate similarity threshold. For example, in the provided dataset (sorted by `similarity`), we observe unrelated emails with maximum similarity rate of `0.24` and related emails with minimal similarity rate of `0.7`. This suggests setting the threshold between these values.
 
